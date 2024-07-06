@@ -1,0 +1,111 @@
+/* app/javascript/stylesheets/application.css */
+
+/* Your custom styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 20px;
+}
+
+.calendar {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+#calendar {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.fc {
+  direction: ltr;
+}
+
+.fc table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fc th, .fc td {
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+
+.fc th {
+  background: #f5f5f5;
+  font-weight: bold;
+}
+
+.fc .fc-today {
+  background: #eaf6ff;
+}
+
+/* Custom styles for FullCalendar buttons */
+.fc .fc-button {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+.fc .fc-button:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+.fc .fc-button:focus {
+  box-shadow: none;
+}
+
+.fc .fc-button-group {
+  margin-bottom: 10px;
+}
+
+/* Custom styles for the FullCalendar navigation buttons */
+.fc-toolbar h2 {
+  font-size: 1.5rem;
+}
+
+.fc-toolbar .fc-left {
+  display: flex;
+  align-items: center;
+}
+
+.fc-toolbar .fc-right {
+  display: flex;
+  align-items: center;
+}
+
+.fc .fc-button-group .fc-prev-button,
+.fc .fc-button-group .fc-next-button {
+  margin: 0 5px;
+}
+
+/* Other custom styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+a {
+  color: #007bff;
+}
+
+a:hover {
+  color: #0056b3;
+}

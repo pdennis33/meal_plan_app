@@ -1,0 +1,11 @@
+<h1>Meals</h1>
+<%= link_to 'New Meal', new_meal_path %>
+<ul>
+  <% @meals.each do |meal| %>
+    <li>
+      <%= link_to meal.name, meal %>
+      <%= link_to 'Edit', edit_meal_path(meal) %>
+      <%= link_to 'Destroy', meal, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </li>
+  <% end %>
+</ul>

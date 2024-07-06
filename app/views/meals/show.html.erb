@@ -1,0 +1,11 @@
+<h1><%= @meal.name %></h1>
+<p>
+  <strong>Ingredients:</strong>
+<ul>
+  <% @meal.ingredients.each do |ingredient| %>
+    <li><%= ingredient.name %> (<%= ingredient.ingredients_meals.find_by(meal_id: @meal.id).quantity %> <%= ingredient.unit %>)</li>
+  <% end %>
+</ul>
+</p>
+<%= link_to 'Edit', edit_meal_path(@meal) %> |
+<%= link_to 'Back', meals_path %>

@@ -1,0 +1,11 @@
+<h1>Meal Plan for <%= @meal_plan.date %></h1>
+<p>
+  <strong>Meals:</strong>
+<ul>
+  <% @meal_plan.meals.each do |meal| %>
+    <li><%= meal.name %></li>
+  <% end %>
+</ul>
+</p>
+<%= link_to 'Edit', edit_meal_plan_path(@meal_plan) %> |
+<%= link_to 'Back', meal_plans_path %>

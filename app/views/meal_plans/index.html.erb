@@ -1,0 +1,23 @@
+<div class="container mt-5">
+  <h1 class="mb-4">Meal Plans</h1>
+
+  <div id="calendar" class="mb-4"></div>
+
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <%= link_to 'New Meal Plan', new_meal_plan_path, class: 'btn btn-primary' %>
+  </div>
+
+  <ul class="list-group">
+    <% @meal_plans.each do |meal_plan| %>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>
+          <%= link_to meal_plan.date, meal_plan, class: 'text-decoration-none' %>
+        </span>
+        <span>
+          <%= link_to 'Edit', edit_meal_plan_path(meal_plan), class: 'btn btn-sm btn-secondary' %>
+          <%= link_to 'Destroy', meal_plan, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
+        </span>
+      </li>
+    <% end %>
+  </ul>
+</div>

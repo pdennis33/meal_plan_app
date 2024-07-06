@@ -1,0 +1,21 @@
+<h1>Shopping List</h1>
+
+<%= form_with url: shopping_lists_path, method: :get do %>
+  <div>
+    <%= label_tag :start_date %>
+    <%= date_field_tag :start_date, @start_date %>
+  </div>
+  <div>
+    <%= label_tag :end_date %>
+    <%= date_field_tag :end_date, @end_date %>
+  </div>
+  <%= submit_tag 'Generate Shopping List' %>
+<% end %>
+
+<ul>
+  <% @shopping_list.each do |ingredient, quantity| %>
+    <li><%= ingredient %>: <%= quantity %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Back to Meal Plans', meal_plans_path %>
